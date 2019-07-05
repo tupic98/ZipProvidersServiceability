@@ -1,4 +1,6 @@
-import { Column, Entity, PrimaryColumn } from 'typeorm';
+import { Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
+import Details from './details.entity';
+import Categories from './categories.entity';
 
 @Entity()
 class DetailsCategory {
@@ -7,4 +9,18 @@ class DetailsCategory {
 
   @Column()
   categoryName!: string;
+
+  @OneToMany(() => Details, details => details.detailsCategory, {
+    cascade: true,
+    eager: true,
+  })
+  details!: Details[];
+
+  @OneToMany(() => Categories, categories => categories.categoryName, {
+    cascade: true,
+    eager: true,
+  })
+  categories!: Categories[];
 }
+
+export default DetailsCategory;

@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import Provider from './providers.entity';
 
 @Entity()
 class Address {
@@ -13,6 +14,12 @@ class Address {
 
   @Column()
   zip!: string;
+
+  @OneToMany(() => Provider, provider => provider.address, {
+    cascade: true,
+    eager: true
+  })
+  providers!: Provider[];
 }
 
 export default Address;

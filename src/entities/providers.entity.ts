@@ -1,5 +1,6 @@
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryColumn } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryColumn } from 'typeorm';
 import Address from './address.entity';
+import Categories from './categories.entity';
 
 @Entity()
 class Provider {
@@ -21,12 +22,23 @@ class Provider {
   @Column()
   datacount!: number;
 
-  @ManyToOne(() => Address, {
+  @ManyToOne(() => Address, address => address.providers, {
     cascade: true,
     eager: true,
   })
   @JoinColumn()
-  address_id!: number;
+  address!: Address;
+
+  @OneToMany(() => Categories, categories => categories.provider, {
+    cascade: true,
+    eager: true,
+  })
+  categories!: Categories[];
 }
 
 export default Provider;
+
+// Serial -> address
+// Categories
+// details
+// technologies
