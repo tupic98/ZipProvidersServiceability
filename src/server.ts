@@ -3,6 +3,7 @@ import 'reflect-metadata';
 import { createConnection } from 'typeorm';
 import App from './app';
 import config from './ormconfig';
+import MainController from './controllers/main.controller';
 
 (async () => {
   try {
@@ -13,7 +14,9 @@ import config from './ormconfig';
     return e;
   }
   const app = new App(
-    [],
+    [
+      new MainController(),
+    ],
   );
   app.listen();
 })();

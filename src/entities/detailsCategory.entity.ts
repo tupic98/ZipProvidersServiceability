@@ -10,16 +10,10 @@ class DetailsCategory {
   @Column()
   categoryName!: string;
 
-  @OneToMany(() => Details, details => details.detailsCategory, {
-    cascade: true,
-    eager: true,
-  })
+  @OneToMany(() => Details, details => details.detailsCategory)
   details!: Details[];
 
-  @OneToMany(() => Categories, categories => categories.categoryName, {
-    cascade: true,
-    eager: true,
-  })
+  @OneToMany(() => Categories, categories => categories.categoryName)
   categories!: Categories[];
 }
 

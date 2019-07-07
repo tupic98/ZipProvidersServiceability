@@ -11,7 +11,7 @@ class Provider {
   providerName!: string;
 
   @Column()
-  companyId!: string;
+  companyId!: number;
 
   @Column()
   partnerId!: number;
@@ -29,10 +29,7 @@ class Provider {
   @JoinColumn()
   address!: Address;
 
-  @OneToMany(() => Categories, categories => categories.provider, {
-    cascade: true,
-    eager: true,
-  })
+  @OneToMany(() => Categories, categories => categories.provider)
   categories!: Categories[];
 }
 

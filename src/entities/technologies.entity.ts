@@ -26,11 +26,12 @@ class Technologies {
   @Column()
   dataGranularity!: string;
 
-  @OneToMany(() => Categories, categories => categories.technologies, {
+  @ManyToOne(() => Categories, categories => categories.technologies, {
     cascade: true,
     eager: true,
   })
-  categories!:Categories[];
+  @JoinColumn()
+  categories!:Categories;
 }
 
 export default Technologies;

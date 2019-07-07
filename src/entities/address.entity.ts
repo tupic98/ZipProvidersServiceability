@@ -15,10 +15,7 @@ class Address {
   @Column()
   zip!: string;
 
-  @OneToMany(() => Provider, provider => provider.address, {
-    cascade: true,
-    eager: true
-  })
+  @OneToMany(() => Provider, provider => provider.address)
   providers!: Provider[];
 }
 

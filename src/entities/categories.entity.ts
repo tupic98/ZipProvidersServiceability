@@ -1,4 +1,4 @@
-import { Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import DetailsCategory from './detailsCategory.entity';
 import Provider from './providers.entity';
 import Details from './details.entity';
@@ -36,12 +36,8 @@ class Categories {
   @JoinColumn()
   details!: Details;
 
-  @ManyToOne(() => Technologies, technologies => technologies.categories, {
-    cascade: true,
-    eager: true,
-  })
-  @JoinColumn()
-  technologies!: Technologies;
+  @OneToMany(() => Technologies, technologies => technologies.categories)
+  technologies!: Technologies[];
 }
 
 export default Categories;

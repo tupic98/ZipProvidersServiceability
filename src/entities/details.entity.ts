@@ -36,16 +36,10 @@ class Details {
   @Column()
   maxChannels!: string;
 
-  @OneToMany(() => Technologies, technologies => technologies.details, {
-    cascade: true,
-    eager: true,
-  })
+  @OneToMany(() => Technologies, technologies => technologies.details)
   technologies!: Technologies[];
 
-  @OneToMany(() => Categories, categories => categories.details, {
-    cascade: true,
-    eager: true,
-  })
+  @OneToMany(() => Categories, categories => categories.details)
   categories!: Categories[];
 }
 
