@@ -34,7 +34,7 @@ __decorate([
     __metadata("design:type", Number)
 ], Technologies.prototype, "datacount", void 0);
 __decorate([
-    typeorm_1.ManyToOne(() => details_entity_1.default, details => details.technologies, {
+    typeorm_1.ManyToOne(() => details_entity_1.default, {
         cascade: true,
         eager: true,
     }),
@@ -46,7 +46,7 @@ __decorate([
     __metadata("design:type", String)
 ], Technologies.prototype, "dataGranularity", void 0);
 __decorate([
-    typeorm_1.ManyToOne(() => categories_entity_1.default, categories => categories.technologies, {
+    typeorm_1.ManyToOne(() => categories_entity_1.default, {
         cascade: true,
         eager: true,
     }),

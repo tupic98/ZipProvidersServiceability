@@ -10,9 +10,9 @@ class DetailsCategory {
   @Column()
   categoryName!: string;
 
-  @OneToMany(() => Details, details => details.detailsCategory)
-  details!: Details[];
-
+  // @OneToMany(() => Details, details => details.detailsCategory)
+  // details!: Details[];
+  //
   @OneToMany(() => Categories, categories => categories.categoryName)
   categories!: Categories[];
 }

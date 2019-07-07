@@ -13,8 +13,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
-const address_entity_1 = __importDefault(require("./address.entity"));
 const categories_entity_1 = __importDefault(require("./categories.entity"));
+const address_provider_entity_1 = __importDefault(require("./address_provider.entity"));
 let Provider = class Provider {
 };
 __decorate([
@@ -22,33 +22,36 @@ __decorate([
     __metadata("design:type", Number)
 ], Provider.prototype, "id", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column("varchar"),
     __metadata("design:type", String)
 ], Provider.prototype, "providerName", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column("int"),
+    __metadata("design:type", Number)
+], Provider.prototype, "providerId", void 0);
+__decorate([
+    typeorm_1.Column("int"),
     __metadata("design:type", Number)
 ], Provider.prototype, "companyId", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column({
+        type: "int",
+        nullable: true,
+    }),
     __metadata("design:type", Number)
 ], Provider.prototype, "partnerId", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column("real"),
     __metadata("design:type", Number)
 ], Provider.prototype, "serviceable", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column("int"),
     __metadata("design:type", Number)
 ], Provider.prototype, "datacount", void 0);
 __decorate([
-    typeorm_1.ManyToOne(() => address_entity_1.default, address => address.providers, {
-        cascade: true,
-        eager: true,
-    }),
-    typeorm_1.JoinColumn(),
-    __metadata("design:type", address_entity_1.default)
-], Provider.prototype, "address", void 0);
+    typeorm_1.OneToMany(() => address_provider_entity_1.default, address_providers => address_providers.provider),
+    __metadata("design:type", Array)
+], Provider.prototype, "address_providers", void 0);
 __decorate([
     typeorm_1.OneToMany(() => categories_entity_1.default, categories => categories.provider),
     __metadata("design:type", Array)

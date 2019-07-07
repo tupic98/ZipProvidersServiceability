@@ -16,7 +16,7 @@ class Technologies {
   @Column()
   datacount!: number;
 
-  @ManyToOne(() => Details, details => details.technologies, {
+  @ManyToOne(() => Details, {
     cascade: true,
     eager: true,
   })
@@ -26,7 +26,7 @@ class Technologies {
   @Column()
   dataGranularity!: string;
 
-  @ManyToOne(() => Categories, categories => categories.technologies, {
+  @ManyToOne(() => Categories, {
     cascade: true,
     eager: true,
   })

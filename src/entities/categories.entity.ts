@@ -36,8 +36,8 @@ class Categories {
   @JoinColumn()
   details!: Details;
 
-  @OneToMany(() => Technologies, technologies => technologies.categories)
-  technologies!: Technologies[];
+  // @OneToMany(() => Technologies, technologies => technologies.categories)
+  // technologies!: Technologies[];
 }
 
 export default Categories;

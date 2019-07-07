@@ -8,7 +8,7 @@ class Details {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @ManyToOne(() => DetailsCategory, detailsCategory => detailsCategory.details, {
+  @ManyToOne(() => DetailsCategory,{
     cascade: true,
     eager: true,
   })
@@ -36,9 +36,9 @@ class Details {
   @Column()
   maxChannels!: string;
 
-  @OneToMany(() => Technologies, technologies => technologies.details)
-  technologies!: Technologies[];
-
+  // @OneToMany(() => Technologies, technologies => technologies.details)
+  // technologies!: Technologies[];
+  //
   @OneToMany(() => Categories, categories => categories.details)
   categories!: Categories[];
 }

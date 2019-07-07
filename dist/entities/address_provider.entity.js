@@ -12,50 +12,33 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const typeorm_1 = require("typeorm");
-const detailsCategory_entity_1 = __importDefault(require("./detailsCategory.entity"));
+const address_entity_1 = __importDefault(require("./address.entity"));
 const providers_entity_1 = __importDefault(require("./providers.entity"));
-const details_entity_1 = __importDefault(require("./details.entity"));
-let Categories = class Categories {
+const typeorm_1 = require("typeorm");
+let Address_providers = class Address_providers {
 };
 __decorate([
     typeorm_1.PrimaryGeneratedColumn(),
     __metadata("design:type", Number)
-], Categories.prototype, "id", void 0);
+], Address_providers.prototype, "id", void 0);
 __decorate([
-    typeorm_1.ManyToOne(() => detailsCategory_entity_1.default, detailsCategory => detailsCategory.categories, {
+    typeorm_1.ManyToOne(() => address_entity_1.default, address => address.address_providers, {
         cascade: true,
         eager: true,
     }),
     typeorm_1.JoinColumn(),
-    __metadata("design:type", detailsCategory_entity_1.default)
-], Categories.prototype, "categoryName", void 0);
+    __metadata("design:type", address_entity_1.default)
+], Address_providers.prototype, "address", void 0);
 __decorate([
-    typeorm_1.Column(),
-    __metadata("design:type", Number)
-], Categories.prototype, "serviceable", void 0);
-__decorate([
-    typeorm_1.Column(),
-    __metadata("design:type", Number)
-], Categories.prototype, "datacount", void 0);
-__decorate([
-    typeorm_1.ManyToOne(() => providers_entity_1.default, provider => provider.categories, {
+    typeorm_1.ManyToOne(() => providers_entity_1.default, provider => provider.address_providers, {
         cascade: true,
         eager: true,
     }),
     typeorm_1.JoinColumn(),
     __metadata("design:type", providers_entity_1.default)
-], Categories.prototype, "provider", void 0);
-__decorate([
-    typeorm_1.ManyToOne(() => details_entity_1.default, details => details.categories, {
-        cascade: true,
-        eager: true,
-    }),
-    typeorm_1.JoinColumn(),
-    __metadata("design:type", details_entity_1.default)
-], Categories.prototype, "details", void 0);
-Categories = __decorate([
+], Address_providers.prototype, "provider", void 0);
+Address_providers = __decorate([
     typeorm_1.Entity()
-], Categories);
-exports.default = Categories;
-//# sourceMappingURL=categories.entity.js.map
+], Address_providers);
+exports.default = Address_providers;
+//# sourceMappingURL=address_provider.entity.js.map

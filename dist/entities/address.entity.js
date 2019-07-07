@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
-const providers_entity_1 = __importDefault(require("./providers.entity"));
+const address_provider_entity_1 = __importDefault(require("./address_provider.entity"));
 let Address = class Address {
 };
 __decorate([
@@ -21,21 +21,21 @@ __decorate([
     __metadata("design:type", Number)
 ], Address.prototype, "id", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column("varchar"),
     __metadata("design:type", String)
 ], Address.prototype, "city", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column("varchar"),
     __metadata("design:type", String)
 ], Address.prototype, "state", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column("varchar"),
     __metadata("design:type", String)
 ], Address.prototype, "zip", void 0);
 __decorate([
-    typeorm_1.OneToMany(() => providers_entity_1.default, provider => provider.address),
+    typeorm_1.OneToMany(() => address_provider_entity_1.default, address_provider => address_provider.address),
     __metadata("design:type", Array)
-], Address.prototype, "providers", void 0);
+], Address.prototype, "address_providers", void 0);
 Address = __decorate([
     typeorm_1.Entity()
 ], Address);
