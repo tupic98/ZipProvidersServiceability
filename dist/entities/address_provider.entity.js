@@ -13,8 +13,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const address_entity_1 = __importDefault(require("./address.entity"));
-const providers_entity_1 = __importDefault(require("./providers.entity"));
 const typeorm_1 = require("typeorm");
+const providers_entity_1 = __importDefault(require("./providers.entity"));
 let Address_providers = class Address_providers {
 };
 __decorate([
@@ -23,18 +23,14 @@ __decorate([
 ], Address_providers.prototype, "id", void 0);
 __decorate([
     typeorm_1.ManyToOne(() => address_entity_1.default, address => address.address_providers, {
-        cascade: true,
         eager: true,
     }),
-    typeorm_1.JoinColumn(),
     __metadata("design:type", address_entity_1.default)
 ], Address_providers.prototype, "address", void 0);
 __decorate([
-    typeorm_1.ManyToOne(() => providers_entity_1.default, provider => provider.address_providers, {
-        cascade: true,
+    typeorm_1.ManyToOne(() => providers_entity_1.default, providers => providers.address_providers, {
         eager: true,
     }),
-    typeorm_1.JoinColumn(),
     __metadata("design:type", providers_entity_1.default)
 ], Address_providers.prototype, "provider", void 0);
 Address_providers = __decorate([

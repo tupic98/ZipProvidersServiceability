@@ -22,37 +22,45 @@ __decorate([
     __metadata("design:type", Number)
 ], Technologies.prototype, "id", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column({
+        type: 'varchar',
+        nullable: true,
+    }),
     __metadata("design:type", String)
 ], Technologies.prototype, "technologyName", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column({
+        type: 'real',
+        nullable: true,
+    }),
     __metadata("design:type", Number)
 ], Technologies.prototype, "serviceable", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column({
+        type: 'int',
+        nullable: true,
+    }),
     __metadata("design:type", Number)
 ], Technologies.prototype, "datacount", void 0);
 __decorate([
-    typeorm_1.ManyToOne(() => details_entity_1.default, {
-        cascade: true,
+    typeorm_1.ManyToOne(() => details_entity_1.default, details => details.technologies, {
         eager: true,
     }),
-    typeorm_1.JoinColumn(),
     __metadata("design:type", details_entity_1.default)
 ], Technologies.prototype, "details", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column({
+        type: 'varchar',
+        nullable: true,
+    }),
     __metadata("design:type", String)
 ], Technologies.prototype, "dataGranularity", void 0);
 __decorate([
-    typeorm_1.ManyToOne(() => categories_entity_1.default, {
-        cascade: true,
+    typeorm_1.ManyToOne(() => categories_entity_1.default, categories => categories.technologies, {
         eager: true,
     }),
-    typeorm_1.JoinColumn(),
     __metadata("design:type", categories_entity_1.default)
-], Technologies.prototype, "categories", void 0);
+], Technologies.prototype, "category", void 0);
 Technologies = __decorate([
     typeorm_1.Entity()
 ], Technologies);

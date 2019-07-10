@@ -1,8 +1,8 @@
 import { Column, Entity, JoinColumn, ManyToOne, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import DetailsCategory from './detailsCategory.entity';
-import Provider from './providers.entity';
 import Details from './details.entity';
 import Technologies from './technologies.entity';
+import Providers from './providers.entity';
 
 @Entity()
 class Categories {
@@ -10,34 +10,35 @@ class Categories {
   id!: number;
 
   @ManyToOne(() => DetailsCategory, detailsCategory => detailsCategory.categories, {
-    cascade: true,
     eager: true,
   })
-  @JoinColumn()
   categoryName!: DetailsCategory;
 
-  @Column()
+  @Column({
+    type: 'real',
+    nullable: true,
+  })
   serviceable!: number;
 
-  @Column()
+  @Column({
+    type: 'int',
+    nullable: true,
+  })
   datacount!: number;
 
-  @ManyToOne(() => Provider, provider => provider.categories, {
-    cascade: true,
+  @ManyToOne(() => Providers, providers => providers.categories, {
     eager: true,
   })
-  @JoinColumn()
-  provider!: Provider;
+  provider!: Providers;
 
   @ManyToOne(() => Details, details => details.categories, {
-    cascade: true,
     eager: true,
   })
-  @JoinColumn()
   details!: Details;
 
-  // @OneToMany(() => Technologies, technologies => technologies.categories)
-  // technologies!: Technologies[];
+//  One to Many relations
+  @OneToMany(() => Technologies, technologies => technologies.category)
+  technologies!: Technologies[];
 }
 
 export default Categories;

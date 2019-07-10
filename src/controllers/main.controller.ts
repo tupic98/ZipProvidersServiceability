@@ -4,19 +4,19 @@ import { getConnection, getRepository } from 'typeorm';
 import Address from '../entities/address.entity';
 import axios, { AxiosResponse } from 'axios';
 import ZipNotFoundException from '../exceptions/ZipNotFoundException';
-import Provider from '../entities/providers.entity';
 import Categories from '../entities/categories.entity';
 import DetailsCategory from '../entities/detailsCategory.entity';
 import Details from '../entities/details.entity';
 import Technologies from '../entities/technologies.entity';
 import Address_providers from '../entities/address_provider.entity';
+import Providers from '../entities/providers.entity';
 
 class MainController implements Controller {
   public path = '/fetch';
   public router = express.Router();
   private addressRepository = getRepository(Address);
   private detailsCategoryRepository = getRepository(DetailsCategory);
-  private providersRepository = getRepository(Provider);
+  private providersRepository = getRepository(Providers);
   private categoriesRepository = getRepository(Categories);
   private detailsRepository = getRepository(Details);
   private technologiesRepository = getRepository(Technologies);
@@ -34,6 +34,7 @@ class MainController implements Controller {
     const zip = req.params.zip;
     const allServices = await this.addressRepository.findOne({
       where: { zip: zip},
+      relations: ["address_providers"],
     }).catch();
     if (allServices){
       res.status(200).send(allServices);
@@ -60,7 +61,7 @@ class MainController implements Controller {
 
     // Setting Providers
     responseJson.providers.forEach(async (provider) => {
-      const prov = new Provider();
+      const prov = new Providers();
       // Setting Provider id
       prov.id = provider.providerId;
       // Setting Provider providerName
@@ -124,7 +125,7 @@ class MainController implements Controller {
             tech.datacount = technology.dataCount;
             tech.details = savedDetails;
             tech.dataGranularity = technology.dataGranularity;
-            tech.categories = savedCategories;
+            tech.category = savedCategories;
 
             const savedTechnologies = await this.technologiesRepository.save(tech).catch();
           });
@@ -159,7 +160,7 @@ class MainController implements Controller {
             tech.datacount = technology.dataCount;
             tech.details = savedDetails;
             tech.dataGranularity = technology.dataGranularity;
-            tech.categories = savedCategories;
+            tech.category = savedCategories;
 
             const savedTechnologies = await this.technologiesRepository.save(tech).catch();
           });
@@ -196,7 +197,7 @@ class MainController implements Controller {
             tech.datacount = technology.dataCount;
             tech.details = savedDetails;
             tech.dataGranularity = technology.dataGranularity;
-            tech.categories = savedCategories;
+            tech.category = savedCategories;
 
             const savedTechnologies = await this.technologiesRepository.save(tech).catch();
           });

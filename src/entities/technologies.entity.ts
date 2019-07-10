@@ -7,31 +7,39 @@ class Technologies {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @Column()
+  @Column({
+    type: 'varchar',
+    nullable: true,
+  })
   technologyName!: string;
 
-  @Column()
+  @Column({
+    type: 'real',
+    nullable: true,
+  })
   serviceable!: number;
 
-  @Column()
+  @Column({
+    type: 'int',
+    nullable: true,
+  })
   datacount!: number;
 
-  @ManyToOne(() => Details, {
-    cascade: true,
+  @ManyToOne(() => Details, details => details.technologies, {
     eager: true,
   })
-  @JoinColumn()
   details!: Details;
 
-  @Column()
+  @Column({
+    type: 'varchar',
+    nullable: true,
+  })
   dataGranularity!: string;
 
-  @ManyToOne(() => Categories, {
-    cascade: true,
+  @ManyToOne(() => Categories, categories => categories.technologies, {
     eager: true,
   })
-  @JoinColumn()
-  categories!:Categories;
+  category!: Categories;
 }
 
 export default Technologies;

@@ -21,19 +21,28 @@ __decorate([
     __metadata("design:type", Number)
 ], Address.prototype, "id", void 0);
 __decorate([
-    typeorm_1.Column("varchar"),
+    typeorm_1.Column({
+        type: 'varchar',
+        nullable: true,
+    }),
     __metadata("design:type", String)
 ], Address.prototype, "city", void 0);
 __decorate([
-    typeorm_1.Column("varchar"),
+    typeorm_1.Column({
+        type: 'varchar',
+        nullable: true,
+    }),
     __metadata("design:type", String)
 ], Address.prototype, "state", void 0);
 __decorate([
-    typeorm_1.Column("varchar"),
+    typeorm_1.Column({
+        type: 'varchar',
+        nullable: true,
+    }),
     __metadata("design:type", String)
 ], Address.prototype, "zip", void 0);
 __decorate([
-    typeorm_1.OneToMany(() => address_provider_entity_1.default, address_provider => address_provider.address),
+    typeorm_1.OneToMany(() => address_provider_entity_1.default, address_providers => address_providers.address),
     __metadata("design:type", Array)
 ], Address.prototype, "address_providers", void 0);
 Address = __decorate([

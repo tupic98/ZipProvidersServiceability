@@ -7,16 +7,26 @@ class Address {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @Column("varchar")
+  @Column({
+    type: 'varchar',
+    nullable: true,
+  })
   city!: string;
 
-  @Column("varchar")
+  @Column({
+    type: 'varchar',
+    nullable: true,
+  })
   state!: string;
 
-  @Column("varchar")
+  @Column({
+    type: 'varchar',
+    nullable: true,
+  })
   zip!: string;
 
-  @OneToMany(() => Address_providers, address_provider => address_provider.address)
+//  One To Many relations
+  @OneToMany(() => Address_providers, address_providers => address_providers.address)
   address_providers!: Address_providers[];
 }
 

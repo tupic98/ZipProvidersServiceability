@@ -14,6 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
 const detailsCategory_entity_1 = __importDefault(require("./detailsCategory.entity"));
+const technologies_entity_1 = __importDefault(require("./technologies.entity"));
 const categories_entity_1 = __importDefault(require("./categories.entity"));
 let Details = class Details {
 };
@@ -22,45 +23,68 @@ __decorate([
     __metadata("design:type", Number)
 ], Details.prototype, "id", void 0);
 __decorate([
-    typeorm_1.ManyToOne(() => detailsCategory_entity_1.default, {
-        cascade: true,
+    typeorm_1.ManyToOne(() => detailsCategory_entity_1.default, detailsCategory => detailsCategory.details, {
         eager: true,
     }),
-    typeorm_1.JoinColumn(),
     __metadata("design:type", detailsCategory_entity_1.default)
 ], Details.prototype, "detailsCategory", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column({
+        type: 'varchar',
+        nullable: true,
+    }),
     __metadata("design:type", String)
 ], Details.prototype, "minPrice", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column({
+        type: 'varchar',
+        nullable: true,
+    }),
     __metadata("design:type", String)
 ], Details.prototype, "maxDownloadSpeed", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column({
+        type: 'varchar',
+        nullable: true,
+    }),
     __metadata("design:type", String)
 ], Details.prototype, "maxDownloadSpeedUnit", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column({
+        type: 'varchar',
+        nullable: true,
+    }),
     __metadata("design:type", String)
 ], Details.prototype, "minDownloadSpeed", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column({
+        type: 'varchar',
+        nullable: true,
+    }),
     __metadata("design:type", String)
 ], Details.prototype, "minDownloadSpeedUnit", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column({
+        type: 'varchar',
+        nullable: true,
+    }),
     __metadata("design:type", String)
 ], Details.prototype, "minChannels", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column({
+        type: 'varchar',
+        nullable: true,
+    }),
     __metadata("design:type", String)
 ], Details.prototype, "maxChannels", void 0);
 __decorate([
     typeorm_1.OneToMany(() => categories_entity_1.default, categories => categories.details),
     __metadata("design:type", Array)
 ], Details.prototype, "categories", void 0);
+__decorate([
+    typeorm_1.OneToMany(() => technologies_entity_1.default, technologies => technologies.details),
+    __metadata("design:type", Array)
+], Details.prototype, "technologies", void 0);
 Details = __decorate([
     typeorm_1.Entity()
 ], Details);

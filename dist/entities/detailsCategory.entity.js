@@ -13,6 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
+const details_entity_1 = __importDefault(require("./details.entity"));
 const categories_entity_1 = __importDefault(require("./categories.entity"));
 let DetailsCategory = class DetailsCategory {
 };
@@ -21,13 +22,20 @@ __decorate([
     __metadata("design:type", Number)
 ], DetailsCategory.prototype, "id", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column({
+        type: 'varchar',
+        nullable: true,
+    }),
     __metadata("design:type", String)
 ], DetailsCategory.prototype, "categoryName", void 0);
 __decorate([
     typeorm_1.OneToMany(() => categories_entity_1.default, categories => categories.categoryName),
     __metadata("design:type", Array)
 ], DetailsCategory.prototype, "categories", void 0);
+__decorate([
+    typeorm_1.OneToMany(() => details_entity_1.default, details => details.detailsCategory),
+    __metadata("design:type", Array)
+], DetailsCategory.prototype, "details", void 0);
 DetailsCategory = __decorate([
     typeorm_1.Entity()
 ], DetailsCategory);

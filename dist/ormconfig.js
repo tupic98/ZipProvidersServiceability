@@ -16,7 +16,6 @@ const config = {
     cli: {
         migrationsDir: '/migrations',
     },
-    synchronize: true,
 };
 exports.default = config;
 //# sourceMappingURL=ormconfig.js.map

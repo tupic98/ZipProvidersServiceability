@@ -15,51 +15,66 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
 const categories_entity_1 = __importDefault(require("./categories.entity"));
 const address_provider_entity_1 = __importDefault(require("./address_provider.entity"));
-let Provider = class Provider {
+let Providers = class Providers {
 };
 __decorate([
     typeorm_1.PrimaryColumn(),
     __metadata("design:type", Number)
-], Provider.prototype, "id", void 0);
+], Providers.prototype, "id", void 0);
 __decorate([
-    typeorm_1.Column("varchar"),
+    typeorm_1.Column({
+        type: 'varchar',
+        nullable: true,
+    }),
     __metadata("design:type", String)
-], Provider.prototype, "providerName", void 0);
+], Providers.prototype, "providerName", void 0);
 __decorate([
-    typeorm_1.Column("int"),
+    typeorm_1.Column({
+        type: 'int',
+        nullable: true,
+    }),
     __metadata("design:type", Number)
-], Provider.prototype, "providerId", void 0);
+], Providers.prototype, "providerId", void 0);
 __decorate([
-    typeorm_1.Column("int"),
+    typeorm_1.Column({
+        type: 'int',
+        nullable: true,
+    }),
     __metadata("design:type", Number)
-], Provider.prototype, "companyId", void 0);
+], Providers.prototype, "companyId", void 0);
 __decorate([
     typeorm_1.Column({
         type: "int",
         nullable: true,
     }),
     __metadata("design:type", Number)
-], Provider.prototype, "partnerId", void 0);
+], Providers.prototype, "partnerId", void 0);
 __decorate([
-    typeorm_1.Column("real"),
+    typeorm_1.Column({
+        type: 'real',
+        nullable: true,
+    }),
     __metadata("design:type", Number)
-], Provider.prototype, "serviceable", void 0);
+], Providers.prototype, "serviceable", void 0);
 __decorate([
-    typeorm_1.Column("int"),
+    typeorm_1.Column({
+        type: 'int',
+        nullable: true,
+    }),
     __metadata("design:type", Number)
-], Provider.prototype, "datacount", void 0);
+], Providers.prototype, "datacount", void 0);
 __decorate([
     typeorm_1.OneToMany(() => address_provider_entity_1.default, address_providers => address_providers.provider),
     __metadata("design:type", Array)
-], Provider.prototype, "address_providers", void 0);
+], Providers.prototype, "address_providers", void 0);
 __decorate([
     typeorm_1.OneToMany(() => categories_entity_1.default, categories => categories.provider),
     __metadata("design:type", Array)
-], Provider.prototype, "categories", void 0);
-Provider = __decorate([
+], Providers.prototype, "categories", void 0);
+Providers = __decorate([
     typeorm_1.Entity()
-], Provider);
-exports.default = Provider;
+], Providers);
+exports.default = Providers;
 // Serial -> address
 // Categories
 // details

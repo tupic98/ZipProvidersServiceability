@@ -7,14 +7,19 @@ class DetailsCategory {
   @PrimaryColumn()
   id!: number;
 
-  @Column()
+  @Column({
+    type: 'varchar',
+    nullable: true,
+  })
   categoryName!: string;
 
-  // @OneToMany(() => Details, details => details.detailsCategory)
-  // details!: Details[];
-  //
+//  One to Many relations
+
   @OneToMany(() => Categories, categories => categories.categoryName)
   categories!: Categories[];
+
+  @OneToMany(() => Details, details => details.detailsCategory)
+  details!: Details[];
 }
 
 export default DetailsCategory;

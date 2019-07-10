@@ -8,39 +8,60 @@ class Details {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @ManyToOne(() => DetailsCategory,{
-    cascade: true,
+  @ManyToOne(() => DetailsCategory, detailsCategory => detailsCategory.details, {
     eager: true,
   })
-  @JoinColumn()
   detailsCategory!: DetailsCategory;
 
-  @Column()
+  @Column({
+    type: 'varchar',
+    nullable: true,
+  })
   minPrice!: string;
 
-  @Column()
+  @Column({
+    type: 'varchar',
+    nullable: true,
+  })
   maxDownloadSpeed!: string;
 
-  @Column()
+  @Column({
+    type: 'varchar',
+    nullable: true,
+  })
   maxDownloadSpeedUnit!: string;
 
-  @Column()
+  @Column({
+    type: 'varchar',
+    nullable: true,
+  })
   minDownloadSpeed!: string;
 
-  @Column()
+  @Column({
+    type: 'varchar',
+    nullable: true,
+  })
   minDownloadSpeedUnit!: string;
 
-  @Column()
+  @Column({
+    type: 'varchar',
+    nullable: true,
+  })
   minChannels!: string;
 
-  @Column()
+  @Column({
+    type: 'varchar',
+    nullable: true,
+  })
   maxChannels!: string;
 
-  // @OneToMany(() => Technologies, technologies => technologies.details)
-  // technologies!: Technologies[];
-  //
+//  One to Many relations
+
   @OneToMany(() => Categories, categories => categories.details)
   categories!: Categories[];
+
+  @OneToMany(() => Technologies, technologies => technologies.details)
+  technologies!: Technologies[];
 }
 
 export default Details;

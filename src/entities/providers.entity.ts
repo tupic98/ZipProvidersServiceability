@@ -4,17 +4,26 @@ import Categories from './categories.entity';
 import Address_providers from './address_provider.entity';
 
 @Entity()
-class Provider {
+class Providers {
   @PrimaryColumn()
-  id!: Number;
+  id!: number;
 
-  @Column("varchar")
+  @Column({
+    type: 'varchar',
+    nullable: true,
+  })
   providerName!: string;
 
-  @Column("int")
+  @Column({
+    type: 'int',
+    nullable: true,
+  })
   providerId!: number;
 
-  @Column("int")
+  @Column({
+    type: 'int',
+    nullable: true,
+  })
   companyId!: number;
 
   @Column({
@@ -23,11 +32,19 @@ class Provider {
   })
   partnerId!: number;
 
-  @Column("real")
+  @Column({
+    type: 'real',
+    nullable: true,
+  })
   serviceable!: number;
 
-  @Column("int")
+  @Column({
+    type: 'int',
+    nullable: true,
+  })
   datacount!: number;
+
+//  One to Many relations
 
   @OneToMany(() => Address_providers, address_providers => address_providers.provider)
   address_providers!: Address_providers[];
@@ -36,7 +53,7 @@ class Provider {
   categories!: Categories[];
 }
 
-export default Provider;
+export default Providers;
 
 // Serial -> address
 // Categories

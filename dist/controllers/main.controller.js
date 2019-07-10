@@ -16,12 +16,12 @@ const typeorm_1 = require("typeorm");
 const address_entity_1 = __importDefault(require("../entities/address.entity"));
 const axios_1 = __importDefault(require("axios"));
 const ZipNotFoundException_1 = __importDefault(require("../exceptions/ZipNotFoundException"));
-const providers_entity_1 = __importDefault(require("../entities/providers.entity"));
 const categories_entity_1 = __importDefault(require("../entities/categories.entity"));
 const detailsCategory_entity_1 = __importDefault(require("../entities/detailsCategory.entity"));
 const details_entity_1 = __importDefault(require("../entities/details.entity"));
 const technologies_entity_1 = __importDefault(require("../entities/technologies.entity"));
 const address_provider_entity_1 = __importDefault(require("../entities/address_provider.entity"));
+const providers_entity_1 = __importDefault(require("../entities/providers.entity"));
 class MainController {
     constructor() {
         this.path = '/fetch';
@@ -37,6 +37,7 @@ class MainController {
             const zip = req.params.zip;
             const allServices = yield this.addressRepository.findOne({
                 where: { zip: zip },
+                relations: ["address_providers"],
             }).catch();
             if (allServices) {
                 res.status(200).send(allServices);
@@ -125,7 +126,7 @@ class MainController {
                             tech.datacount = technology.dataCount;
                             tech.details = savedDetails;
                             tech.dataGranularity = technology.dataGranularity;
-                            tech.categories = savedCategories;
+                            tech.category = savedCategories;
                             const savedTechnologies = yield this.technologiesRepository.save(tech).catch();
                         }));
                     }
@@ -155,7 +156,7 @@ class MainController {
                             tech.datacount = technology.dataCount;
                             tech.details = savedDetails;
                             tech.dataGranularity = technology.dataGranularity;
-                            tech.categories = savedCategories;
+                            tech.category = savedCategories;
                             const savedTechnologies = yield this.technologiesRepository.save(tech).catch();
                         }));
                     }
@@ -187,7 +188,7 @@ class MainController {
                             tech.datacount = technology.dataCount;
                             tech.details = savedDetails;
                             tech.dataGranularity = technology.dataGranularity;
-                            tech.categories = savedCategories;
+                            tech.category = savedCategories;
                             const savedTechnologies = yield this.technologiesRepository.save(tech).catch();
                         }));
                     }

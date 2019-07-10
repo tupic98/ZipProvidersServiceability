@@ -14,8 +14,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
 const detailsCategory_entity_1 = __importDefault(require("./detailsCategory.entity"));
-const providers_entity_1 = __importDefault(require("./providers.entity"));
 const details_entity_1 = __importDefault(require("./details.entity"));
+const technologies_entity_1 = __importDefault(require("./technologies.entity"));
+const providers_entity_1 = __importDefault(require("./providers.entity"));
 let Categories = class Categories {
 };
 __decorate([
@@ -24,36 +25,40 @@ __decorate([
 ], Categories.prototype, "id", void 0);
 __decorate([
     typeorm_1.ManyToOne(() => detailsCategory_entity_1.default, detailsCategory => detailsCategory.categories, {
-        cascade: true,
         eager: true,
     }),
-    typeorm_1.JoinColumn(),
     __metadata("design:type", detailsCategory_entity_1.default)
 ], Categories.prototype, "categoryName", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column({
+        type: 'real',
+        nullable: true,
+    }),
     __metadata("design:type", Number)
 ], Categories.prototype, "serviceable", void 0);
 __decorate([
-    typeorm_1.Column(),
+    typeorm_1.Column({
+        type: 'int',
+        nullable: true,
+    }),
     __metadata("design:type", Number)
 ], Categories.prototype, "datacount", void 0);
 __decorate([
-    typeorm_1.ManyToOne(() => providers_entity_1.default, provider => provider.categories, {
-        cascade: true,
+    typeorm_1.ManyToOne(() => providers_entity_1.default, providers => providers.categories, {
         eager: true,
     }),
-    typeorm_1.JoinColumn(),
     __metadata("design:type", providers_entity_1.default)
 ], Categories.prototype, "provider", void 0);
 __decorate([
     typeorm_1.ManyToOne(() => details_entity_1.default, details => details.categories, {
-        cascade: true,
         eager: true,
     }),
-    typeorm_1.JoinColumn(),
     __metadata("design:type", details_entity_1.default)
 ], Categories.prototype, "details", void 0);
+__decorate([
+    typeorm_1.OneToMany(() => technologies_entity_1.default, technologies => technologies.category),
+    __metadata("design:type", Array)
+], Categories.prototype, "technologies", void 0);
 Categories = __decorate([
     typeorm_1.Entity()
 ], Categories);
