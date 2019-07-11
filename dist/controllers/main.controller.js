@@ -35,10 +35,13 @@ class MainController {
         this.addressProviderRepository = typeorm_1.getRepository(address_provider_entity_1.default);
         this.getAllServicesByZip = (req, res, next) => __awaiter(this, void 0, void 0, function* () {
             const zip = req.params.zip;
-            const allServices = yield this.addressRepository.findOne({
-                where: { zip: zip },
-                relations: ["address_providers"],
-            }).catch();
+            const allServices = yield typeorm_1.createQueryBuilder("address")
+                .innerJoinAndSelect("address.address_providers", "ap")
+                .innerJoinAndSelect("address_providers.");
+            // const allServices = await this.addressRepository.findOne({
+            //   where: { zip: zip},
+            //   relations: ["address_providers"],
+            // }).catch();
             if (allServices) {
                 res.status(200).send(allServices);
             }

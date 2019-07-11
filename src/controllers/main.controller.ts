@@ -1,6 +1,6 @@
 import Controller from '../interfaces/controller.interface';
 import express, { response } from 'express';
-import { getConnection, getRepository } from 'typeorm';
+import { createQueryBuilder, getConnection, getRepository } from 'typeorm';
 import Address from '../entities/address.entity';
 import axios, { AxiosResponse } from 'axios';
 import ZipNotFoundException from '../exceptions/ZipNotFoundException';
@@ -32,10 +32,13 @@ class MainController implements Controller {
 
   private getAllServicesByZip = async (req: express.Request, res: express.Response, next: express.NextFunction) => {
     const zip = req.params.zip;
-    const allServices = await this.addressRepository.findOne({
-      where: { zip: zip},
-      relations: ["address_providers"],
-    }).catch();
+    const allServices = await createQueryBuilder("address")
+      .innerJoinAndSelect("address.address_providers", "ap")
+      .innerJoinAndSelect("address_providers.")
+    // const allServices = await this.addressRepository.findOne({
+    //   where: { zip: zip},
+    //   relations: ["address_providers"],
+    // }).catch();
     if (allServices){
       res.status(200).send(allServices);
     }else {

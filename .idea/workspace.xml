@@ -5,31 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/controllers/main.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/controllers/main.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/controllers/main.controller.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/controllers/main.controller.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entities/address.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entities/address.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entities/address.entity.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entities/address.entity.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entities/address_provider.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entities/address_provider.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entities/address_provider.entity.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entities/address_provider.entity.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entities/categories.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entities/categories.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entities/categories.entity.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entities/categories.entity.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entities/details.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entities/details.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entities/details.entity.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entities/details.entity.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entities/detailsCategory.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entities/detailsCategory.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entities/detailsCategory.entity.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entities/detailsCategory.entity.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entities/providers.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entities/providers.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entities/providers.entity.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entities/providers.entity.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entities/technologies.entity.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entities/technologies.entity.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/entities/technologies.entity.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/entities/technologies.entity.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/ormconfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/ormconfig.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/ormconfig.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/ormconfig.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controllers/main.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/main.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/address.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/address.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/address_provider.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/address_provider.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/categories.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/categories.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/details.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/details.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/detailsCategory.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/detailsCategory.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/providers.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/providers.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/technologies.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/technologies.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ormconfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/ormconfig.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -75,7 +51,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/ormconfig.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="368">
+                <state relative-caret-position="276">
                   <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
                   <folding>
                     <element signature="e#311#350#0" expanded="true" />
@@ -97,22 +73,17 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/controllers/main.controller.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="368">
-                  <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+                <state relative-caret-position="460">
+                  <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
                   <folding>
                     <element signature="e#0#60#0" expanded="true" />
                     <element signature="n#!!block;n#constructor#0;n#MainController#0" expanded="true" />
                     <element signature="n#!!block;n#initializeRoutes#0;n#MainController#0" expanded="true" />
-                    <element signature="e#1802#1821#0" expanded="true" />
-                    <element signature="e#1863#2046#0" expanded="true" />
-                    <element signature="e#1988#2028#0" expanded="true" />
-                    <element signature="e#2060#2130#0" expanded="true" />
+                    <element signature="e#1844#1863#0" expanded="true" />
+                    <element signature="e#1905#2088#0" expanded="true" />
+                    <element signature="e#2030#2070#0" expanded="true" />
+                    <element signature="e#2102#2172#0" expanded="true" />
                     <element signature="n#!!block;n#insertNewData#0;n#MainController#0" expanded="true" />
-                    <element signature="e#2535#8551#0" expanded="true" />
-                    <element signature="e#3619#8543#0" expanded="true" />
-                    <element signature="e#4974#5443#0" expanded="true" />
-                    <element signature="e#6456#6925#0" expanded="true" />
-                    <element signature="e#8054#8523#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -121,7 +92,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/server.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="368">
+                <state relative-caret-position="253">
                   <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
                   <folding>
                     <element signature="e#0#22#0" expanded="true" />
@@ -177,29 +148,23 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/entities/providers.entity.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="506">
-                  <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
+                <state relative-caret-position="805">
+                  <caret line="56" selection-start-line="56" selection-end-line="56" />
                   <folding>
                     <element signature="e#0#90#0" expanded="true" />
-                    <element signature="e#309#355#0" expanded="true" />
-                    <element signature="e#393#435#0" expanded="true" />
-                    <element signature="e#471#498#0" expanded="true" />
-                    <element signature="e#474#516#0" expanded="true" />
-                    <element signature="e#625#647#0" expanded="true" />
-                    <element signature="e#705#726#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/entities/address_provider.entity.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="483">
-                  <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+                <state relative-caret-position="391">
+                  <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
-                    <element signature="e#313#335#0" expanded="true" />
+                    <element signature="e#312#334#0" expanded="true" />
                     <element signature="e#430#452#0" expanded="true" />
                   </folding>
                 </state>
@@ -209,30 +174,25 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/entities/categories.entity.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="161">
+                <state relative-caret-position="69">
                   <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
                   <folding>
                     <element signature="e#0#99#0" expanded="true" />
-                    <element signature="e#448#469#0" expanded="true" />
-                    <element signature="e#373#395#0" expanded="true" />
-                    <element signature="e#453#474#0" expanded="true" />
-                    <element signature="e#726#748#0" expanded="true" />
-                    <element signature="e#837#858#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/entities/address.entity.ts">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="477">
                   <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
                   <folding>
                     <element signature="e#0#76#0" expanded="true" />
-                    <element signature="e#260#285#0" expanded="true" />
-                    <element signature="e#336#361#0" expanded="true" />
-                    <element signature="e#413#438#0" expanded="true" />
+                    <element signature="e#260#306#0" expanded="true" />
+                    <element signature="e#336#382#0" expanded="true" />
+                    <element signature="e#413#459#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -241,18 +201,10 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/entities/details.entity.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="368">
+                <state relative-caret-position="805">
                   <caret line="61" selection-start-line="61" selection-end-line="61" />
                   <folding>
                     <element signature="e#0#99#0" expanded="true" />
-                    <element signature="e#404#426#0" expanded="true" />
-                    <element signature="e#332#357#0" expanded="true" />
-                    <element signature="e#414#460#0" expanded="true" />
-                    <element signature="e#500#525#0" expanded="true" />
-                    <element signature="e#592#617#0" expanded="true" />
-                    <element signature="e#680#705#0" expanded="true" />
-                    <element signature="e#772#797#0" expanded="true" />
-                    <element signature="e#855#880#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -261,7 +213,7 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/entities/detailsCategory.entity.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="184">
+                <state relative-caret-position="207">
                   <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
                   <folding>
                     <element signature="e#0#67#0" expanded="true" />
@@ -273,15 +225,11 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/entities/technologies.entity.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="431">
+                <state relative-caret-position="552">
                   <caret line="42" selection-start-line="42" selection-end-line="42" />
                   <folding>
                     <element signature="e#0#99#0" expanded="true" />
-                    <element signature="e#272#297#0" expanded="true" />
-                    <element signature="e#358#380#0" expanded="true" />
-                    <element signature="e#438#459#0" expanded="true" />
                     <element signature="e#566#588#0" expanded="true" />
-                    <element signature="e#515#540#0" expanded="true" />
                     <element signature="e#769#791#0" expanded="true" />
                   </folding>
                 </state>
@@ -317,18 +265,18 @@
         <option value="$PROJECT_DIR$/src/entities/details.entity.ts" />
         <option value="$PROJECT_DIR$/src/ormconfig.ts" />
         <option value="$PROJECT_DIR$/src/server.ts" />
-        <option value="$PROJECT_DIR$/src/entities/address_provider.entity.ts" />
         <option value="$PROJECT_DIR$/src/entities/providers.entity.ts" />
         <option value="$PROJECT_DIR$/src/entities/technologies.entity.ts" />
         <option value="$PROJECT_DIR$/src/entities/categories.entity.ts" />
+        <option value="$PROJECT_DIR$/src/entities/address_provider.entity.ts" />
         <option value="$PROJECT_DIR$/src/controllers/main.controller.ts" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="88" />
-    <option name="width" value="1908" />
-    <option name="height" value="1056" />
+    <option name="x" value="232" />
+    <option name="width" value="1380" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -336,6 +284,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -364,7 +313,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -372,7 +320,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="javascript.nodejs.core.library.configured.version" value="11.15.0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../project-crm" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -411,17 +359,19 @@
       <workItem from="1562356269933" duration="8157000" />
       <workItem from="1562429250857" duration="24967000" />
       <workItem from="1562517811361" duration="9887000" />
-      <workItem from="1562710088456" duration="14411000" />
+      <workItem from="1562710088456" duration="14609000" />
+      <workItem from="1562867354997" duration="8641000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64228000" />
+    <option name="totallyTimeSpent" value="73067000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1086" extended-state="6" />
+    <frame x="-6" y="0" width="1932" height="1086" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17333333" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17493333" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -507,8 +457,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/ormconfig.js.map">
-      <provider editor-type-id="sourcemapFileViewerProvider" />
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="sourcemapFileViewerProvider" />
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/ormconfig.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -546,6 +496,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ormconfig.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding>
+            <element signature="e#311#350#0" expanded="true" />
+            <element signature="e#366#394#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+            <element signature="e#452#487#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/exceptions/ZipNotFoundException.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -577,54 +556,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
+    <entry file="file://$PROJECT_DIR$/src/entities/categories.entity.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ormconfig.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        <state relative-caret-position="69">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding>
-            <element signature="e#311#350#0" expanded="true" />
-            <element signature="e#366#394#0" expanded="true" />
+            <element signature="e#0#99#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server.ts">
+    <entry file="file://$PROJECT_DIR$/src/entities/details.entity.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        <state relative-caret-position="805">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
           <folding>
-            <element signature="e#0#22#0" expanded="true" />
-            <element signature="e#452#487#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/providers.entity.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="55" column="24" selection-start-line="55" selection-start-column="24" selection-end-line="55" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#90#0" expanded="true" />
-            <element signature="e#309#355#0" expanded="true" />
-            <element signature="e#393#435#0" expanded="true" />
-            <element signature="e#471#498#0" expanded="true" />
-            <element signature="e#474#516#0" expanded="true" />
-            <element signature="e#625#647#0" expanded="true" />
-            <element signature="e#705#726#0" expanded="true" />
+            <element signature="e#0#99#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/entities/detailsCategory.entity.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
+        <state relative-caret-position="207">
           <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
           <folding>
             <element signature="e#0#67#0" expanded="true" />
@@ -634,49 +588,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/entities/technologies.entity.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="431">
+        <state relative-caret-position="552">
           <caret line="42" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="e#0#99#0" expanded="true" />
-            <element signature="e#272#297#0" expanded="true" />
-            <element signature="e#358#380#0" expanded="true" />
-            <element signature="e#438#459#0" expanded="true" />
             <element signature="e#566#588#0" expanded="true" />
-            <element signature="e#515#540#0" expanded="true" />
             <element signature="e#769#791#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/details.entity.ts">
+    <entry file="file://$PROJECT_DIR$/src/entities/address_provider.entity.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
+        <state relative-caret-position="391">
+          <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
           <folding>
-            <element signature="e#0#99#0" expanded="true" />
-            <element signature="e#404#426#0" expanded="true" />
-            <element signature="e#332#357#0" expanded="true" />
-            <element signature="e#414#460#0" expanded="true" />
-            <element signature="e#500#525#0" expanded="true" />
-            <element signature="e#592#617#0" expanded="true" />
-            <element signature="e#680#705#0" expanded="true" />
-            <element signature="e#772#797#0" expanded="true" />
-            <element signature="e#855#880#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#312#334#0" expanded="true" />
+            <element signature="e#430#452#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/categories.entity.ts">
+    <entry file="file://$PROJECT_DIR$/src/entities/providers.entity.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state relative-caret-position="805">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
           <folding>
-            <element signature="e#0#99#0" expanded="true" />
-            <element signature="e#448#469#0" expanded="true" />
-            <element signature="e#373#395#0" expanded="true" />
-            <element signature="e#453#474#0" expanded="true" />
-            <element signature="e#726#748#0" expanded="true" />
-            <element signature="e#837#858#0" expanded="true" />
+            <element signature="e#0#90#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -687,43 +626,26 @@
           <caret line="32" column="22" selection-start-line="32" selection-start-column="22" selection-end-line="32" selection-end-column="22" />
           <folding>
             <element signature="e#0#76#0" expanded="true" />
-            <element signature="e#260#285#0" expanded="true" />
-            <element signature="e#336#361#0" expanded="true" />
-            <element signature="e#413#438#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/entities/address_provider.entity.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#313#335#0" expanded="true" />
-            <element signature="e#430#452#0" expanded="true" />
+            <element signature="e#260#306#0" expanded="true" />
+            <element signature="e#336#382#0" expanded="true" />
+            <element signature="e#413#459#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/main.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="36" column="38" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+        <state relative-caret-position="460">
+          <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
           <folding>
             <element signature="e#0#60#0" expanded="true" />
             <element signature="n#!!block;n#constructor#0;n#MainController#0" expanded="true" />
             <element signature="n#!!block;n#initializeRoutes#0;n#MainController#0" expanded="true" />
-            <element signature="e#1802#1821#0" expanded="true" />
-            <element signature="e#1863#2046#0" expanded="true" />
-            <element signature="e#1988#2028#0" expanded="true" />
-            <element signature="e#2060#2130#0" expanded="true" />
+            <element signature="e#1844#1863#0" expanded="true" />
+            <element signature="e#1905#2088#0" expanded="true" />
+            <element signature="e#2030#2070#0" expanded="true" />
+            <element signature="e#2102#2172#0" expanded="true" />
             <element signature="n#!!block;n#insertNewData#0;n#MainController#0" expanded="true" />
-            <element signature="e#2535#8551#0" expanded="true" />
-            <element signature="e#3619#8543#0" expanded="true" />
-            <element signature="e#4974#5443#0" expanded="true" />
-            <element signature="e#6456#6925#0" expanded="true" />
-            <element signature="e#8054#8523#0" expanded="true" />
           </folding>
         </state>
       </provider>
