@@ -86,7 +86,10 @@ __decorate([
     __metadata("design:type", Array)
 ], Details.prototype, "technologies", void 0);
 Details = __decorate([
-    typeorm_1.Entity()
+    typeorm_1.Entity({
+        name: "details",
+        schema: "public",
+    })
 ], Details);
 exports.default = Details;
 //# sourceMappingURL=details.entity.js.map

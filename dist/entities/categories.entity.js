@@ -60,7 +60,10 @@ __decorate([
     __metadata("design:type", Array)
 ], Categories.prototype, "technologies", void 0);
 Categories = __decorate([
-    typeorm_1.Entity()
+    typeorm_1.Entity({
+        name: "categories",
+        schema: "public",
+    })
 ], Categories);
 exports.default = Categories;
 //# sourceMappingURL=categories.entity.js.map

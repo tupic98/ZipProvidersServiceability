@@ -1,8 +1,11 @@
 import Address from './address.entity';
-import { Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import {Column, Entity, JoinColumn, ManyToOne, PrimaryGeneratedColumn} from 'typeorm';
 import Providers from './providers.entity';
 
-@Entity()
+@Entity({
+  name: "address_providers",
+  schema: "public",
+})
 class Address_providers {
   @PrimaryGeneratedColumn()
   id!: number;

@@ -2,7 +2,10 @@ import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import Provider from './providers.entity';
 import Address_providers from './address_provider.entity';
 
-@Entity()
+@Entity({
+  name: "address",
+  schema: "public",
+})
 class Address {
   @PrimaryGeneratedColumn()
   id!: number;

@@ -3,7 +3,10 @@ import DetailsCategory from './detailsCategory.entity'
 import Technologies from './technologies.entity';
 import Categories from './categories.entity';
 
-@Entity()
+@Entity({
+  name: "details",
+  schema: "public",
+})
 class Details {
   @PrimaryGeneratedColumn()
   id!: number;

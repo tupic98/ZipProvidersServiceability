@@ -2,7 +2,10 @@ import { Column, Entity, OneToMany, PrimaryColumn } from 'typeorm';
 import Details from './details.entity';
 import Categories from './categories.entity';
 
-@Entity()
+@Entity({
+  name: "details_category",
+  schema: "public",
+})
 class DetailsCategory {
   @PrimaryColumn()
   id!: number;

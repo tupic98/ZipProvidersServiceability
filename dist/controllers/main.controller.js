@@ -35,26 +35,39 @@ class MainController {
         this.addressProviderRepository = typeorm_1.getRepository(address_provider_entity_1.default);
         this.getAllServicesByZip = (req, res, next) => __awaiter(this, void 0, void 0, function* () {
             const zip = req.params.zip;
-            const allServices = yield typeorm_1.createQueryBuilder("address")
-                .innerJoinAndSelect("address.address_providers", "ap")
-                .innerJoinAndSelect("address_providers.");
-            // const allServices = await this.addressRepository.findOne({
-            //   where: { zip: zip},
-            //   relations: ["address_providers"],
-            // }).catch();
-            if (allServices) {
-                res.status(200).send(allServices);
+            let allServices;
+            try {
+                allServices = yield typeorm_1.createQueryBuilder('address')
+                    .innerJoin('address_providers', 'ap', 'a.id = ap."addressId"')
+                    .innerJoinAndSelect('providers', 'p', 'ap."providerId" = p.id')
+                    .where('a.zip = :zip', { zip: zip })
+                    .getQuery();
+                yield typeorm_1.createQueryBuilder('address')
+                    .innerJoin('')
+                    .
+                ;
             }
-            else {
-                yield axios_1.default.post('https://predict.harbinger.redventures.io/serviceability/projected/zip', { zip: zip,
+            catch (e) {
+                throw new Error(e);
+            }
+            if (!allServices) {
+                yield axios_1.default.post('https://predict.harbinger.redventures.io/serviceability/projected/zip', {
+                    zip: zip,
                 }).then((response) => __awaiter(this, void 0, void 0, function* () {
                     this.insertNewData(response.data, zip).catch();
-                    res.status(200).send(yield this.addressRepository.findOne({
-                        where: { zip: zip },
-                    }).catch());
+                    res.status(200).send(() => __awaiter(this, void 0, void 0, function* () {
+                        return yield this.addressRepository.findOne({
+                            where: { zip: zip },
+                        }).catch();
+                    }));
                 })).catch(() => {
                     res.status(404).send(new ZipNotFoundException_1.default(zip));
                 });
+                next('');
+            }
+            else {
+                res.status(200).send(allServices);
+                next('');
             }
         });
         this.initializeRoutes();

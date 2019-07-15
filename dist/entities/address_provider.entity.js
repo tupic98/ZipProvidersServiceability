@@ -34,7 +34,10 @@ __decorate([
     __metadata("design:type", providers_entity_1.default)
 ], Address_providers.prototype, "provider", void 0);
 Address_providers = __decorate([
-    typeorm_1.Entity()
+    typeorm_1.Entity({
+        name: "address_providers",
+        schema: "public",
+    })
 ], Address_providers);
 exports.default = Address_providers;
 //# sourceMappingURL=address_provider.entity.js.map

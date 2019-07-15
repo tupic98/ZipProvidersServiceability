@@ -37,7 +37,10 @@ __decorate([
     __metadata("design:type", Array)
 ], DetailsCategory.prototype, "details", void 0);
 DetailsCategory = __decorate([
-    typeorm_1.Entity()
+    typeorm_1.Entity({
+        name: "details_category",
+        schema: "public",
+    })
 ], DetailsCategory);
 exports.default = DetailsCategory;
 //# sourceMappingURL=detailsCategory.entity.js.map
